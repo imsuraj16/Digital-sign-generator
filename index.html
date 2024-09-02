@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Signature Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #signature {
+            font-size: 36px;
+            margin: 20px 0;
+        }
+        .signature-box, .canvas-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            display: inline-block;
+            min-width: 300px;
+            margin-bottom: 20px;
+        }
+        canvas {
+            border: 1px solid #ccc;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Digital Signature Generator</h1>
+
+    <!-- Text-based Signature -->
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <div class="signature-box">
+        <p id="signature"></p>
+    </div>
+    <button id="copyBtn">Copy to Clipboard</button>
+    <button id="downloadBtn">Download as Image</button>
+
+    <!-- Free-hand Signature -->
+    <div class="canvas-container">
+        <canvas id="drawCanvas" width="500" height="200"></canvas>
+    </div>
+    <button id="clearBtn">Clear Canvas</button>
+    <button id="downloadDrawnBtn">Download Drawn Signature</button>
+
+    <script src="./index.js"></script>
+</body>
+</html>
